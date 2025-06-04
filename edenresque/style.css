@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+* {
+    font-family: Poppins, 'Segoe UI', sans-serif;
+}
+
+.bg-color {
+    background-color: #e5deca;
+}
+
+.bg-color2 {
+    background-color: #ccc2a6ce;
+}
+
+.bg-color3 {
+    background-color: #EEDBD8;
+}
+
+.text-color {
+    color: #413c3c;
+}
+
+body {
+    background-color:  0.bjh9
+    #243227;
+}
+
+.section-bg {
+    background-color: #FFFAF5;
+}
+
+.home-bg {
+    background: url('img/wallpaper1.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    gap: 30vw;
+}
+
+.a-text {
+    padding: 1em 2em;
+    transition: background-color 150ms ease;
+}
+
+.a-text:hover {
+    background-color: #cfbdaa;
+}
+
+.a-text-footer:hover {
+    color: #7e746a !important;
+}
+
+.bg-container {
+    background-color: #f3e9df;
+
+}
+
+.accordion-button {
+    background-color: #ccc2a6ce !important;
+    color: #000 !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-button:active {
+    background-color: #ccc2a6ce !important;
+    color: #000 !important;
+}
+
+.opacity-bg {
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+}
+
+.bg-1 {
+    background-color: #f1d2b4;
+}
+
+.bg-2 {
+    background-color: #f0e0d1;
+}
+
+nav a {
+    border-bottom: 2px solid #413c3c;
+}
+
+.card-button {
+    background-color: #e5deca50;
+    border: #38553e;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 100%;
+    padding: 8px;
+    transition: background-color 150ms ease;
+    backdrop-filter: blur(10px);
+  }
+  
+.card-button:hover{
+    background-color: #c09a6e;
+}
+
+.card-icon {
+    fill: #413c3c;
+    height: 96px;
+    width: 96px;
+}
+
+.card-title {
+    color: #413c3c;
+    text-align: center;
+}
+
+.card-list {
+    max-width: 240px;
+    max-height: 240px;
+}
+
+.pet-img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    max-width: 500px;
+    margin: auto;
+}
+
+.blog-header {
+    background: url('img/wallpaper2.jpg') center;
+    background-size: cover;
+    color: white;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-header h1 {
+    background-color: rgba(0,0,0,0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.img-config {
+    height: 300px !important;
+}
+
+@media (min-width: 768px) {
+    .donation-card {
+      min-height: 500px;
+    }
+}
+
+@media (max-width: 1197px) {
+    .sidebar {
+        background-color: rgba(243, 245, 243, 0.3);
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media (max-width: 769px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 490px) {
+    .home-bg {
+        gap: 24px;
+    }
+    .home-bg h3 {
+        min-width: 100%;
+        font-size: 18px;
+        padding: 12px !important;
+    }
+}

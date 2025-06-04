@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadata and external links for styling and scripts -->
+    <title>Eden Resque | Adopt a Pet Today</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Custom CSS file -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Bootstrap and Popper.js for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="bg-container">
+
+    <!-- Header Section -->
+    <header>
+      <nav class="navbar navbar-expand-xl text-color bg-color p-0">
+        <div class="container">
+          <!-- Home button -->
+          <a class="navbar-brand fs-5 a-text" href="index.html">Home</a>
+          <!-- Navbar toggler for smaller screens -->
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Sidebar for additional navigation links -->
+          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header text-dark border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">&nbsp&nbsp&nbsp Content</h5>
+              <!-- Close button for the sidebar -->
+              <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end align-items-baseline flex-grow-1">
+                <!-- Navigation links -->
+                <li class="nav-item"><a class="nav-link active mx-4 fs-5 a-text" href="about.html">About<span class="visually-hidden">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link active mx-4 fs-5 a-text" href="adopt.html">Adopt a pet</a></li>
+                <li class="nav-item"><a class="nav-link active mx-4 fs-5 a-text" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link active mx-4 fs-5 a-text" href="faqs.html">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link active mx-4 fs-5 a-text" href="donation.html">Donation</a></li>
+                <li class="nav-item"><a class="nav-link active mx-4 fs-5 a-text" href="admin.html">Admin</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="container py-4 text-center">
+      <h1 class="display-5">Find Your New Best Friend</h1>
+      <p class="lead">Browse our lovely pets and give them a forever home.</p>
+    </div>
+    
+    <!-- Section for choosing pets and searching by location -->
+    <div class="container text-center pt-4 pb-4 bg-color w-50">
+      <!-- Buttons for different animal categories -->
+      <div class="card-body mb-5">
+        <button onclick="goToAnimalPage('dog')" class="btn btn-outline-dark w-25 bg-container"><h5>Dogs</h5></button>
+      </div>
+      <div class="card-body mb-5">
+        <button onclick="goToAnimalPage('cat')" class="btn btn-outline-dark w-25 bg-container"><h5>Cats</h5></button>
+      </div>
+      <div class="card-body mb-5">
+        <button onclick="goToAnimalPage('rabbit')" class="btn btn-outline-dark w-25 bg-container"><h5>Rabbits</h5></button>
+      </div>
+      <div class="card-body mb-5">
+        <button onclick="goToAnimalPage('parrot')" class="btn btn-outline-dark w-25 bg-container"><h5>Parrots</h5></button>
+      </div>
+
+      <!-- Location-based pet search -->
+      <h1 class="display-5">Find a Pet</h1>
+      <div class="container">
+        <input class="input-group" type="text" id="location" placeholder="Enter your location (e.g., 10001)">
+        <button type="submit" class="btn btn-outline-dark m-2" onclick="fetchPets()">Search Pets</button>
+      </div>
+      <!-- Area for displaying fetched pet details -->
+      <div id="pet-list"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a class="nav-link px-2 text-dark a-text-footer" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-dark a-text-footer" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-dark a-text-footer" href="adopt.html">Adopt</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-dark a-text-footer" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-dark a-text-footer" href="faqs.html">FAQS</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-dark a-text-footer" href="donation.html">Donation</a></li>
+      </ul>
+      <p class="text-center text-dark">Eden Resque | Adopt a Pet</p>
+    </footer>
+    
+    <!-- JavaScript for dynamic content -->
+    <script>
+      const API_KEY = 'QNqy0SM9PlMZUnE0q3yBkAAVoaepQYDbJNrNGHQKV1N5iQ4rgH';
+      const API_SECRET = 'KONlwhjliQYYqxXr21o64yLTFcMoBsx8V8aVm8PC';
+      let accessToken = '';
+
+      // Function to authenticate and get API access token
+      async function authenticate() {
+        const res = await fetch('https://api.petfinder.com/v2/oauth2/token', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `grant_type=client_credentials&client_id=${API_KEY}&client_secret=${API_SECRET}`
+        });
+        const data = await res.json();
+        accessToken = data.access_token;
+      }
+
+      // Function to fetch pets based on location
+      async function fetchPets() {
+        const location = document.getElementById('location').value || '10001';
+        if (!accessToken) await authenticate();
+
+        const res = await fetch(`https://api.petfinder.com/v2/animals?location=${location}&limit=6`, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }
+        });
+
+        const data = await res.json();
+        displayPets(data.animals);
+      }
+
+      // Function to display pets in the UI
+      function displayPets(pets) {
+        const petList = document.getElementById('pet-list');
+        petList.innerHTML = '';
+
+        pets.forEach(pet => {
+          const petCard = document.createElement('div');
+          petCard.className = 'pet-card';
+
+          const photo = pet.photos[0] ? pet.photos[0].medium : 'https://via.placeholder.com/250x250?text=No+Image';
+          petCard.innerHTML = `
+            <img src="${photo}" alt="${pet.name}" loading="lazy">
+            <h3>${pet.name}</h3>
+            <p>Breed: ${pet.breeds.primary || 'Unknown'}</p>
+            <p>Age: ${pet.age}</p>
+            <p>Gender: ${pet.gender}</p>
+          `;
+
+          petList.appendChild(petCard);
+        });
+      }
+
+      // Function to navigate to specific animal category page
+      function goToAnimalPage(animal) {
+        window.location.href = animal + ".html";
+      }
+
+      // Auto-fetch pets for demonstration purposes
+      fetchPets();
+    </script>
+
+  </body>
+</html>
