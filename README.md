@@ -60,4 +60,4 @@ This project is for educational and demonstration purposes.
 
 ---
 
-Created by \[Your Name or Organization].
+Created by BDA-2408, Boztayev Sanzhar and Yesseniyazova Dilnaz.
